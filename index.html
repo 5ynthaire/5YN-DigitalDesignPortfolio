@@ -1,0 +1,454 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synthaire Gallery</title>
+    <meta name="description" content="Digital artworks by 5ynthaire – human-AI synergy, provocation, synthetic aesthetics.">
+    
+    <!-- Basic reset and styling -->
+    <style>
+        :root {
+            --bg: #fafafa;
+            --text: #111;
+            --accent: #333;
+            --padding: 2rem;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --text: #eee;
+                --accent: #ccc;
+            }
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        header, main, footer {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 0 var(--padding);
+        }
+        
+        header {
+            padding-top: 4rem;
+            padding-bottom: 3rem;
+            text-align: center;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            font-weight: 600;
+        }
+        
+        .tagline {
+            margin-top: 0.5rem;
+            font-size: 1rem;
+            opacity: 0.7;
+        }
+        
+        .artwork {
+            margin-bottom: 8rem;
+            text-align: center;
+        }
+        
+        .artwork figure {
+            margin: 0;
+        }
+        
+        .artwork img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            cursor: pointer;
+            border-radius: 4px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        /* Full-width mode (e.g., screenshots, wide compositions) */
+        .full-width img {
+            max-width: 100%;
+        }
+        
+        /* Framed mode (traditional artwork feel) */
+        .framed img {
+            max-width: 50%;
+            border: 12px solid #fff;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            .framed img {
+                border-color: #111;
+            }
+        }
+        
+        figcaption {
+            margin-top: 1.8rem;
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+        
+        .title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.4rem;
+        }
+        
+        footer {
+            padding: 4rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+        
+        a {
+            color: inherit;
+        }
+    </style>
+    
+    <!-- GLightbox CSS (lightweight, no dependencies) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+</head>
+<body>
+
+    <header>
+        <h1>5ynthaire Gallery</h1>
+        <p class="tagline">Digital artworks exploring human–AI synergy</p>
+    </header>
+
+    <main>
+        
+        <!-- Artwork Slot 1 -->
+        <section class="artwork">
+            <figure class="framed"> <!-- use .full-width or .framed as needed -->
+                <a href="assets/2025-06_brand-logo.svg" class="glightbox" data-glightbox="">
+                    <img src="assets/2025-06_brand-logo.svg" alt="Brand Logo" style="background-color:white;">
+                </a>
+                <figcaption>
+                    <div class="title">5YNTHAIRE Logo Type</div>
+                    <div>June 2025</div>
+                    <div>Brand Identity</div>
+                    <div>Inkscape</div>
+                    <div>Published: Content creator project</div>
+                    <div>CC BY 4.0</div>
+                </figcaption>
+            </figure>
+        </section>
+
+        <!-- Artwork Slot 2 -->
+        <section class="artwork">
+            <figure class="full-width">
+                <a href="assets/2025-10_link-tree.png" class="glightbox" data-glightbox="">
+                    <img src="assets/2025-10_link-tree.png" alt="Link Tree">
+                </a>
+                <figcaption>
+                    <div class="title">Link Tree</div>
+                    <div>June 2025—October 2025</div>
+                    <div>Web Landing Page Design</div>
+                    <div>Inkscape, GIMP, Craiyon, Grok 4 (xAI)</div>
+                    <div>Published: <a href="https://5ynthaire.com" target="_blank">5ynthaire.com</a></div>
+                    <div>CC BY 4.0</div>
+                </figcaption>
+            </figure>
+        </section>
+        <!-- Artwork Slot 2 -->
+       <section class="artwork">
+           <figure class="full-width">
+               <a href="assets/2025-06_canvas-lattice-engine_light.png" class="glightbox" data-glightbox="">
+                   <picture>
+                       <!-- Dark mode version – loads when prefers-color-scheme: dark -->
+                       <source srcset="assets/2025-06_canvas-lattice-engine_dark.png"
+                               media="(prefers-color-scheme: dark)">
+                       
+                       <!-- Light mode version – fallback for light mode or if no preference -->
+                       <img src="assets/2025-06_canvas-lattice-engine_light.png"
+                            alt="Canvas-Lattice Engine">
+                   </picture>
+               </a>
+               <figcaption>
+                   <div class="title">Canvas-Lattice Engine</div>
+                   <div>July 2025</div>
+                    <div>Conceptual Schematic</div>
+                   <div>Inkscape, GIMP</div>
+                   <div>Published: <a href="https://doi.org/10.5281/zenodo.17311913" target="_blank">DOI:10.5281/zenodo.17311913</a></div>
+                   <div>CC BY 4.0</div>
+               </figcaption>
+           </figure>
+       </section>
+        <!-- Artwork Slot 2 -->
+        <section class="artwork">
+            <figure class="full-width">
+                <a href="assets/2025-07_try_me.png" class="glightbox" data-glightbox="">
+                    <img src="assets/2025-07_try_me.png" alt="Try Me button">
+                </a>
+                <figcaption>
+                    <div class="title">Try Me button</div>
+                    <div>July 2025</div>
+                    <div>UI Element</div>
+                    <div>Craiyon, GIMP</div>
+                    <div>Published: <a href="https://x.com/5ynthaire/status/1943296242383024204" target="_blank">X Article</a></div>
+                    <div>CC BY 4.0</div>
+                </figcaption>
+            </figure>
+        </section>
+
+        <!-- Artwork Slot 2 -->
+        <section class="artwork">
+            <figure class="full-width">
+                <a href="assets/2025-07_logical-sinkhole.png" class="glightbox" data-glightbox="">
+                    <img src="assets/2025-07_logical-sinkhole.png" alt="Visualization of Logical Sinkhole">
+                </a>
+                <figcaption>
+                    <div class="title">Visualization of Logical Sinkhole</div>
+                    <div>July 2025</div>
+                    <div>Conceptual Diagram</div>
+                    <div>Python, Grok 4 (xAI), GIMP</div>
+                    <div>Published: <a href="https://x.com/5ynthaire/status/1943296242383024204" target="_blank">X Article</a></div>
+                    <div>CC BY 4.0</div>
+                </figcaption>
+            </figure>
+        </section>
+
+        <!-- Artwork Slot 3 -->
+        <section class="artwork">
+            <figure class="framed">
+                <a href="assets/2025-09_decision-hell.webp" class="glightbox" data-glightbox="">
+                    <img src="assets/2025-09_decision-hell.webp" alt=" Decision Hell">
+                </a>
+                <figcaption>
+                    <div class="title"> Decision Hell</div>
+                    <div>September 2025</div>
+                    <div>Pop Art</div>
+                    <div>Craiyon</div>
+                    <div>Published: <a href="https://note.com/5ynthaire/n/n968703202ba2" target="_blank">Note.com</a></div>
+                    <div>CC BY 4.0</div>
+                </figcaption>
+            </figure>
+        </section>
+        <!-- Artwork Slot 2 -->
+        <section class="artwork">
+            <figure class="framed">
+                <a href="assets/2025-10_hallucinating-ai.png" class="glightbox" data-glightbox="">
+                    <img src="assets/2025-10_hallucinating-ai.png" alt="Hallucinating AI">
+                </a>
+                <figcaption>
+                    <div class="title">Hallucinating AI</div>
+                    <div>Pop Art</div>
+                    <div>October 2025</div>
+                    <div>Craiyon</div>
+                    <div>Published: <a href="https://x.com/5ynthaire/status/2001762487985746429" target="_blank">X Article</a></div>
+                    <div>CC BY 4.0</div>
+                </figcaption>
+            </figure>
+        </section>
+
+        <!-- Artwork Slot 2 -->
+        <section class="artwork">
+            <figure class="full-width">
+                <a href="assets/2025-10_color-synth-lite.png" class="glightbox" data-glightbox="">
+                    <img src="assets/2025-10_color-synth-lite.png" alt="Color Synth Lite">
+                </a>
+                <figcaption>
+                    <div class="title">Color Synth Lite</div>
+                    <div>Web Design</div>
+                    <div>October 2025</div>
+                    <div>Grok 4 (xAI)</div>
+                    <div>Published: <a href="https://5ynthaire.github.io/5YN-ColorSynthLite-HTML/" target="_blank">GitHub</a></div>
+                    <div>CC BY 4.0</div>
+                </figcaption>
+            </figure>
+        </section>
+        <section class="artwork">
+           <figure class="full-width">
+               <a href="assets/2025-10_miura_light.svg" class="glightbox" data-glightbox="">
+                   <picture>
+                       <!-- Dark mode version – loads when prefers-color-scheme: dark -->
+                       <source srcset="assets/2025-10_miura_dark.svg"
+                               media="(prefers-color-scheme: dark)">
+                       
+                       <!-- Light mode version – fallback for light mode or if no preference -->
+                       <img src="assets/2025-10_miura_light.svg"
+                            alt="Miura Fold Output Example">
+                   </picture>
+               </a>
+               <figcaption>
+                   <div class="title">Miura Fold Output Example</div>
+                   <div>October 2025</div>
+                    <div>Origami Pattern</div>
+                   <div>Python, Grok 4 (xAI)</div>
+                    <div>Published: <a href="https://github.com/5ynthaire/5YN-MiuraFoldPatternGen-PY" target="_blank">GitHub</a></div>
+                   <div>CC BY 4.0</div>
+               </figcaption>
+           </figure>
+        </section>
+        <!-- Artwork Slot 3 -->
+        <section class="artwork">
+            <figure class="framed">
+                <a href="assets/2025-12_academia.png" class="glightbox" data-glightbox="">
+                    <img src="assets/2025-12_academia.png" alt="Academia">
+                </a>
+                <figcaption>
+                    <div class="title">Academia</div>
+                    <div>December 2025</div>
+                    <div>AI-Generated Art</div>
+                    <div>Craiyon</div>
+                    <div>Published: <a href="https://note.com/5ynthaire/n/nc70f89d7aa8e" target="_blank">Note.com</a></div>
+                    <div>CC BY 4.0</div>
+                </figcaption>
+            </figure>
+        </section>
+
+        <!-- Artwork Slot 3 -->
+        <section class="artwork">
+            <figure class="full-width">
+                <a href="assets/2025-12_the-true-way.jpg" class="glightbox" data-glightbox="">
+                    <img src="assets/2025-12_the-true-way.jpg" alt="Typography">
+                </a>
+                <figcaption>
+                   <div class="title"><cite>The True Way</cite> Typographic Art</div>
+                   <div>December 2025</div>
+                   <div>Typographic Art</div>
+                   <div>LibreOffice Writer, Craiyon, GIMP</div>
+                   <div>Inspired by <cite>Deus Ex</cite> (Ion Storm, 2000)</div>
+                   <div>Published: <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3625563815" target="_blank">Steam Community</a></div>
+                   <div>CC0 1.0 (Public Domain)</div>
+                </figcaption>
+            </figure>
+        </section>
+        <section class="artwork">
+            <figure class="framed">
+                <a href="assets/2025-12_mode-b.png" class="glightbox" data-glightbox="">
+                    <img src="assets/2025-12_mode-b.png" alt="Mode B: Alternative Mode of Human-LLM Engagement">
+                </a>
+                <figcaption>
+                    <div class="title">Mode B: Alternative Mode of Human-LLM Engagement</div>
+                    <div>December 2025</div>
+                    <div>AI-Generated Art</div>
+                    <div>Craiyon</div>
+                    <div>Published: <a href="https://x.com/5ynthaire/status/2001762487985746429" target="_blank">X Article</a></div>
+                    <div>CC BY 4.0</div>
+                </figcaption>
+            </figure>
+        </section>
+        <!-- Artwork Slot 3 -->
+        <section class="artwork">
+            <figure class="framed">
+                <a href="assets/2025-12_javelin-thrower.png" class="glightbox" data-glightbox="">
+                    <img src="assets/2025-12_javelin-thrower.png" alt="I throw, therefore I am.">
+                </a>
+                <figcaption>
+                    <div class="title">I throw, therefore I am.</div>
+                    <div>December 2025</div>
+                    <div>AI-Generated Art</div>
+                    <div>Craiyon</div>
+                    <div>Published: <a href="https://note.com/5ynthaire/n/nc70f89d7aa8e" target="_blank">Note.com</a></div>
+                    <div>CC BY 4.0</div>
+                </figcaption>
+            </figure>
+        </section>
+        <!-- Artwork Slot 3 -->
+        <section class="artwork">
+            <figure class="framed">
+                <a href="assets/2025-12_ghost-from-gears.png" class="glightbox" data-glightbox="">
+                    <img src="assets/2025-12_ghost-from-gears.png" alt="Ghost from Gears">
+                </a>
+                <figcaption>
+                    <div class="title">Ghost from Gears</div>
+                    <div>December 2025</div>
+                    <div>AI-Generated Art</div>
+                    <div>Craiyon</div>
+                    <div>Published: <a href="https://note.com/5ynthaire/n/n20caf59255a0" target="_blank">Note.com</a></div>
+                    <div>CC BY 4.0</div>
+                </figcaption>
+            </figure>
+        </section>
+        <section class="artwork">
+            <figure class="full-width">
+                <a href="assets/2025-12_study-of-digital-noise.png" class="glightbox" data-glightbox="">
+                    <img src="assets/2025-12_study-of-digital-noise.png" alt="Study of Digital Noise">
+                </a>
+                <figcaption>
+                    <div class="title">Study of Digital Noise</div>
+                    <div>December 2025</div>
+                    <div>AI-Generated Art</div>
+                    <div>Craiyon</div>
+                    <div>Published: <a href="https://note.com/5ynthaire/n/n20caf59255a0" target="_blank">Note.com</a></div>
+                    <div>CC BY 4.0</div>
+                </figcaption>
+            </figure>
+        </section>
+        <!-- Artwork Slot 3 -->
+        <section class="artwork">
+            <figure class="framed">
+                <a href="assets/2025-12_self-portrait.png" class="glightbox" data-glightbox="">
+                    <img src="assets/2025-12_self-portrait.png" alt="Self Portrait">
+                </a>
+                <figcaption>
+                    <div class="title">Self Portrait</div>
+                    <div>December 2025</div>
+                    <div>AI-Generated Art</div>
+                    <div>Craiyon, Grok Imagine (xAI)</div>
+                    <div>Published: <a href="https://note.com/5ynthaire/n/n20caf59255a0" target="_blank">Note.com</a></div>
+                    <div>CC BY 4.0</div>
+                </figcaption>
+            </figure>
+        </section>
+        <!-- Artwork Slot 3 -->
+        <section class="artwork">
+            <figure class="framed">
+                <a href="assets/2025-12_memory_fragments.png" class="glightbox" data-glightbox="">
+                    <img src="assets/2025-12_memory_fragments.png" alt="Memory Fragments">
+                </a>
+                <figcaption>
+                    <div class="title">Memory Fragments</div>
+                    <div>December 2025</div>
+                    <div>AI-Generated Art</div>
+                    <div>Craiyon</div>
+                    <div>Published: <a href="https://note.com/5ynthaire/n/n20caf59255a0" target="_blank">Note.com</a></div>
+                    <div>CC BY 4.0</div>
+                </figcaption>
+            </figure>
+        </section>
+
+        <!-- Artwork Slot 2 -->
+        <section class="artwork">
+            <figure class="full-width">
+                <a href="assets/2025-12_fashion-ad.png" class="glightbox" data-glightbox="">
+                    <img src="assets/2025-12_fashion-ad.png" alt="VEXLEY // 5YNTHETIC">
+                </a>
+                <figcaption>
+                    <div class="title">VEXLEY // 5YNTHETIC (Lookbook Spread)</div>
+                    <div>December 2025</div>
+                    <div>Faux Fashion Lookbook Spread</div>
+                    <div>Perchance.org, Grok Imagine (xAI), GIMP, Inkscape, Gemini (Google)</div>
+                    <div>Published: <a href="https://note.com/5ynthaire/n/n20caf59255a0" target="_blank">Note.com</a></div>
+                    <div>CC BY 4.0</div>
+                </figcaption>
+            </figure>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 <a href="https://github.com/5ynthaire">5ynthaire</a> · <a href="https://x.com/5ynthaire">@5ynthaire</a></p>
+    </footer>
+
+    <!-- GLightbox JS – place just before </body> for fastest perceived load -->
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script>
+        const lightbox = GLightbox({
+            touchNavigation: true,
+            loop: true,
+            autoplayVideos: true
+        });
+    </script>
+</body>
+</html>
