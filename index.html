@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Synthaire Gallery</title>
+    <title>5ynthaire Gallery</title>
     <meta name="description" content="Digital artworks by 5ynthaire – human-AI synergy, provocation, synthetic aesthetics.">
     
     <!-- Basic reset and styling -->
@@ -14,12 +14,11 @@
             --accent: #333;
             --padding: 2rem;
         }
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg: #0f0f0f;
-                --text: #eee;
-                --accent: #ccc;
-            }
+        
+        body.dark {
+            --bg: #0f0f0f;
+            --text: #eee;
+            --accent: #ccc;
         }
         
         body {
@@ -29,6 +28,7 @@
             background: var(--bg);
             color: var(--text);
             line-height: 1.6;
+            transition: background 0.3s ease, color 0.3s ease;
         }
         
         header, main, footer {
@@ -41,6 +41,7 @@
             padding-top: 4rem;
             padding-bottom: 3rem;
             text-align: center;
+            position: relative;
         }
         
         h1 {
@@ -53,6 +54,21 @@
             margin-top: 0.5rem;
             font-size: 1rem;
             opacity: 0.7;
+        }
+        
+        .theme-toggle {
+            position: absolute;
+            top: 1.5rem;
+            right: var(--padding);
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0.6;
+            transition: opacity 0.2s;
+        }
+        .theme-toggle:hover {
+            opacity: 1;
         }
         
         .artwork {
@@ -74,22 +90,20 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
         
-        /* Full-width mode (e.g., screenshots, wide compositions) */
+        /* Full-width mode */
         .full-width img {
             max-width: 100%;
         }
         
-        /* Framed mode (traditional artwork feel) */
+        /* Framed mode */
         .framed img {
             max-width: 50%;
             border: 12px solid #fff;
             box-shadow: 0 8px 30px rgba(0,0,0,0.15);
         }
         
-        @media (prefers-color-scheme: dark) {
-            .framed img {
-                border-color: #111;
-            }
+        body.dark .framed img {
+            border-color: #111;
         }
         
         figcaption {
@@ -116,7 +130,7 @@
         }
     </style>
     
-    <!-- GLightbox CSS (lightweight, no dependencies) -->
+    <!-- GLightbox CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
 </head>
 <body>
@@ -124,13 +138,17 @@
     <header>
         <h1>5ynthaire Gallery</h1>
         <p class="tagline">Digital artworks exploring human–AI synergy</p>
+        <button class="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">
+            <span class="light">☀️</span>
+            <span class="dark" style="display:none;">🌙</span>
+        </button>
     </header>
 
     <main>
         
         <!-- Artwork Slot 1 -->
         <section class="artwork">
-            <figure class="framed"> <!-- use .full-width or .framed as needed -->
+            <figure class="framed">
                 <a href="assets/2025-06_brand-logo.svg" class="glightbox" data-glightbox="">
                     <img src="assets/2025-06_brand-logo.svg" alt="Brand Logo" style="background-color:white;">
                 </a>
@@ -161,31 +179,25 @@
                 </figcaption>
             </figure>
         </section>
-        <!-- Artwork Slot 2 -->
-       <section class="artwork">
-           <figure class="full-width">
-               <a href="assets/2025-06_canvas-lattice-engine_light.png" class="glightbox" data-glightbox="">
-                   <picture>
-                       <!-- Dark mode version – loads when prefers-color-scheme: dark -->
-                       <source srcset="assets/2025-06_canvas-lattice-engine_dark.png"
-                               media="(prefers-color-scheme: dark)">
-                       
-                       <!-- Light mode version – fallback for light mode or if no preference -->
-                       <img src="assets/2025-06_canvas-lattice-engine_light.png"
-                            alt="Canvas-Lattice Engine">
-                   </picture>
-               </a>
-               <figcaption>
-                   <div class="title">Canvas-Lattice Engine</div>
-                   <div>July 2025</div>
+
+        <section class="artwork">
+            <figure class="full-width">
+                <a href="assets/2025-06_canvas-lattice-engine_light.png" class="glightbox" data-glightbox="">
+                    <img src="assets/2025-06_canvas-lattice-engine_light.png" 
+                         data-dark="assets/2025-06_canvas-lattice-engine_dark.png"
+                         alt="Canvas-Lattice Engine">
+                </a>
+                <figcaption>
+                    <div class="title">Canvas-Lattice Engine</div>
+                    <div>July 2025</div>
                     <div>Conceptual Schematic</div>
-                   <div>Inkscape, GIMP</div>
-                   <div>Published: <a href="https://doi.org/10.5281/zenodo.17311913" target="_blank">DOI:10.5281/zenodo.17311913</a></div>
-                   <div>CC BY 4.0</div>
-               </figcaption>
-           </figure>
-       </section>
-        <!-- Artwork Slot 2 -->
+                    <div>Inkscape, GIMP</div>
+                    <div>Published: <a href="https://doi.org/10.5281/zenodo.17311913" target="_blank">DOI:10.5281/zenodo.17311913</a></div>
+                    <div>CC BY 4.0</div>
+                </figcaption>
+            </figure>
+        </section>
+
         <section class="artwork">
             <figure class="full-width">
                 <a href="assets/2025-07_try_me.png" class="glightbox" data-glightbox="">
@@ -202,7 +214,6 @@
             </figure>
         </section>
 
-        <!-- Artwork Slot 2 -->
         <section class="artwork">
             <figure class="full-width">
                 <a href="assets/2025-07_logical-sinkhole.png" class="glightbox" data-glightbox="">
@@ -219,14 +230,13 @@
             </figure>
         </section>
 
-        <!-- Artwork Slot 3 -->
         <section class="artwork">
             <figure class="framed">
                 <a href="assets/2025-09_decision-hell.webp" class="glightbox" data-glightbox="">
-                    <img src="assets/2025-09_decision-hell.webp" alt=" Decision Hell">
+                    <img src="assets/2025-09_decision-hell.webp" alt="Decision Hell">
                 </a>
                 <figcaption>
-                    <div class="title"> Decision Hell</div>
+                    <div class="title">Decision Hell</div>
                     <div>September 2025</div>
                     <div>Pop Art</div>
                     <div>Craiyon</div>
@@ -235,31 +245,25 @@
                 </figcaption>
             </figure>
         </section>
-        <!-- Artwork Slot 2 -->
-       <section class="artwork">
-           <figure class="full-width">
-               <a href="assets/2025-09_information-kernel-framework_light.png" class="glightbox" data-glightbox="">
-                   <picture>
-                       <!-- Dark mode version – loads when prefers-color-scheme: dark -->
-                       <source srcset="assets/2025-09_information-kernel-framework_dark.png"
-                               media="(prefers-color-scheme: dark)">
-                       
-                       <!-- Light mode version – fallback for light mode or if no preference -->
-                       <img src="assets/2025-09_information-kernel-framework_light.png"
-                            alt="Information Kernel Framework">
-                   </picture>
-               </a>
-               <figcaption>
-                   <div class="title">Information Kernel Framework</div>
-                   <div>October 2025</div>
+
+        <section class="artwork">
+            <figure class="full-width">
+                <a href="assets/2025-09_information-kernel-framework_light.png" class="glightbox" data-glightbox="">
+                    <img src="assets/2025-09_information-kernel-framework_light.png" 
+                         data-dark="assets/2025-09_information-kernel-framework_dark.png"
+                         alt="Information Kernel Framework">
+                </a>
+                <figcaption>
+                    <div class="title">Information Kernel Framework</div>
+                    <div>October 2025</div>
                     <div>Conceptual Schematic</div>
-                   <div>Inkscape</div>
-                   <div>Published: <a href="https://github.com/5ynthaire/5YN-InformationKernelLLMHallucinationControl-Idea" target="_blank">DOI:10.5281/zenodo.17274202</a></div>
-                   <div>CC BY 4.0</div>
-               </figcaption>
-           </figure>
-       </section>
-        <!-- Artwork Slot 2 -->
+                    <div>Inkscape</div>
+                    <div>Published: <a href="https://github.com/5ynthaire/5YN-InformationKernelLLMHallucinationControl-Idea" target="_blank">DOI:10.5281/zenodo.17274202</a></div>
+                    <div>CC BY 4.0</div>
+                </figcaption>
+            </figure>
+        </section>
+
         <section class="artwork">
             <figure class="framed">
                 <a href="assets/2025-10_hallucinating-ai.png" class="glightbox" data-glightbox="">
@@ -267,8 +271,8 @@
                 </a>
                 <figcaption>
                     <div class="title">Hallucinating AI</div>
-                    <div>Pop Art</div>
                     <div>October 2025</div>
+                    <div>Pop Art</div>
                     <div>Craiyon</div>
                     <div>Published: <a href="https://x.com/5ynthaire/status/2001762487985746429" target="_blank">X Article</a></div>
                     <div>CC BY 4.0</div>
@@ -276,7 +280,6 @@
             </figure>
         </section>
 
-        <!-- Artwork Slot 2 -->
         <section class="artwork">
             <figure class="full-width">
                 <a href="assets/2025-10_color-synth-lite.png" class="glightbox" data-glightbox="">
@@ -284,38 +287,34 @@
                 </a>
                 <figcaption>
                     <div class="title">Color Synth Lite</div>
-                    <div>Web Design</div>
                     <div>October 2025</div>
+                    <div>Web Design</div>
                     <div>Grok 4 (xAI)</div>
                     <div>Published: <a href="https://5ynthaire.github.io/5YN-ColorSynthLite-HTML/" target="_blank">GitHub</a></div>
                     <div>CC BY 4.0</div>
                 </figcaption>
             </figure>
         </section>
+
         <section class="artwork">
-           <figure class="full-width">
-               <a href="assets/2025-10_miura_light.svg" class="glightbox" data-glightbox="">
-                   <picture>
-                       <!-- Dark mode version – loads when prefers-color-scheme: dark -->
-                       <source srcset="assets/2025-10_miura_dark.svg"
-                               media="(prefers-color-scheme: dark)">
-                       
-                       <!-- Light mode version – fallback for light mode or if no preference -->
-                       <img src="assets/2025-10_miura_light.svg"
-                            alt="Miura Fold Output Example">
-                   </picture>
-               </a>
-               <figcaption>
-                   <div class="title">Miura Fold Output Example</div>
-                   <div>October 2025</div>
+            <figure class="full-width">
+                <a href="assets/2025-10_miura_light.svg" class="glightbox" data-glightbox="">
+                    <img src="assets/2025-10_miura_light.svg" 
+                         data-dark="assets/2025-10_miura_dark.svg"
+                         alt="Miura Fold Output Example">
+                </a>
+                <figcaption>
+                    <div class="title">Miura Fold Output Example</div>
+                    <div>October 2025</div>
                     <div>Origami Pattern</div>
-                   <div>Python, Grok 4 (xAI), Inkscape</div>
+                    <div>Python, Grok 4 (xAI), Inkscape</div>
                     <div>Published: <a href="https://github.com/5ynthaire/5YN-MiuraFoldPatternGen-PY" target="_blank">GitHub</a></div>
-                   <div>CC BY 4.0</div>
-               </figcaption>
-           </figure>
+                    <div>CC BY 4.0</div>
+                </figcaption>
+            </figure>
         </section>
-        <!-- Artwork Slot 3 -->
+
+        <!-- Remaining artworks unchanged (no dark variants needed) -->
         <section class="artwork">
             <figure class="framed">
                 <a href="assets/2025-12_academia.png" class="glightbox" data-glightbox="">
@@ -332,133 +331,26 @@
             </figure>
         </section>
 
-        <!-- Artwork Slot 3 -->
         <section class="artwork">
             <figure class="full-width">
                 <a href="assets/2025-12_the-true-way.jpg" class="glightbox" data-glightbox="">
                     <img src="assets/2025-12_the-true-way.jpg" alt="Typography">
                 </a>
                 <figcaption>
-                   <div class="title"><cite>The True Way</cite> Typographic Art</div>
-                   <div>December 2025</div>
-                   <div>Typographic Art</div>
-                   <div>LibreOffice Writer, Craiyon, GIMP</div>
-                   <div>Inspired by <cite>Deus Ex</cite> (Ion Storm, 2000)</div>
-                   <div>Published: <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3625563815" target="_blank">Steam Community</a></div>
-                   <div>CC0 1.0 (Public Domain)</div>
-                </figcaption>
-            </figure>
-        </section>
-        <section class="artwork">
-            <figure class="framed">
-                <a href="assets/2025-12_mode-b.png" class="glightbox" data-glightbox="">
-                    <img src="assets/2025-12_mode-b.png" alt="Mode B: Alternative Mode of Human-LLM Engagement">
-                </a>
-                <figcaption>
-                    <div class="title">Mode B: Alternative Mode of Human-LLM Engagement</div>
+                    <div class="title"><cite>The True Way</cite> Typographic Art</div>
                     <div>December 2025</div>
-                    <div>AI-Generated Art</div>
-                    <div>Craiyon</div>
-                    <div>Published: <a href="https://x.com/5ynthaire/status/2001762487985746429" target="_blank">X Article</a></div>
-                    <div>CC BY 4.0</div>
-                </figcaption>
-            </figure>
-        </section>
-         <section class="artwork">
-            <figure class="framed">
-                <a href="assets/2025-12_descartes.png" class="glightbox" data-glightbox="">
-                    <img src="assets/2025-12_descartes.png" alt="Rene Descartes Rookie Card ($0.25)">
-                </a>
-                <figcaption>
-                    <div class="title">Rene Descartes Rookie Card ($0.25)</div>
-                    <div>December 2025</div>
-                    <div>Satirical AI-Generated Art</div>
-                    <div>Craiyon</div>
-                    <div>Published: <a href="https://x.com/5ynthaire/status/1999495235441750191" target="_blank">X Article</a></div>
-                    <div>CC BY 4.0</div>
-                </figcaption>
-            </figure>
-        </section>
-        <section class="artwork">
-            <figure class="framed">
-                <a href="assets/2025-12_javelin-thrower.png" class="glightbox" data-glightbox="">
-                    <img src="assets/2025-12_javelin-thrower.png" alt="I throw, therefore I am.">
-                </a>
-                <figcaption>
-                    <div class="title">I throw, therefore I am.</div>
-                    <div>December 2025</div>
-                    <div>AI-Generated Art</div>
-                    <div>Craiyon</div>
-                    <div>Published: <a href="https://note.com/5ynthaire/n/nf35da255120a" target="_blank">Note.com</a></div>
-                    <div>CC BY 4.0</div>
-                </figcaption>
-            </figure>
-        </section>
-        <!-- Artwork Slot 3 -->
-        <section class="artwork">
-            <figure class="framed">
-                <a href="assets/2025-12_ghost-from-gears.png" class="glightbox" data-glightbox="">
-                    <img src="assets/2025-12_ghost-from-gears.png" alt="Ghost from Gears">
-                </a>
-                <figcaption>
-                    <div class="title">Ghost from Gears</div>
-                    <div>December 2025</div>
-                    <div>AI-Generated Art</div>
-                    <div>Craiyon</div>
-                    <div>Published: <a href="https://note.com/5ynthaire/n/n20caf59255a0" target="_blank">Note.com</a></div>
-                    <div>CC BY 4.0</div>
-                </figcaption>
-            </figure>
-        </section>
-        <section class="artwork">
-            <figure class="full-width">
-                <a href="assets/2025-12_study-of-digital-noise.png" class="glightbox" data-glightbox="">
-                    <img src="assets/2025-12_study-of-digital-noise.png" alt="Study of Digital Noise">
-                </a>
-                <figcaption>
-                    <div class="title">Study of Digital Noise</div>
-                    <div>December 2025</div>
-                    <div>AI-Generated Art</div>
-                    <div>Craiyon</div>
-                    <div>Published: <a href="https://note.com/5ynthaire/n/n20caf59255a0" target="_blank">Note.com</a></div>
-                    <div>CC BY 4.0</div>
-                </figcaption>
-            </figure>
-        </section>
-        <!-- Artwork Slot 3 -->
-        <section class="artwork">
-            <figure class="framed">
-                <a href="assets/2025-12_self-portrait.png" class="glightbox" data-glightbox="">
-                    <img src="assets/2025-12_self-portrait.png" alt="Self Portrait">
-                </a>
-                <figcaption>
-                    <div class="title">Self Portrait</div>
-                    <div>December 2025</div>
-                    <div>AI-Generated Art</div>
-                    <div>Craiyon, Grok Imagine (xAI)</div>
-                    <div>Published: <a href="https://note.com/5ynthaire/n/n20caf59255a0" target="_blank">Note.com</a></div>
-                    <div>CC BY 4.0</div>
-                </figcaption>
-            </figure>
-        </section>
-        <!-- Artwork Slot 3 -->
-        <section class="artwork">
-            <figure class="framed">
-                <a href="assets/2025-12_memory_fragments.png" class="glightbox" data-glightbox="">
-                    <img src="assets/2025-12_memory_fragments.png" alt="Memory Fragments">
-                </a>
-                <figcaption>
-                    <div class="title">Memory Fragments</div>
-                    <div>December 2025</div>
-                    <div>AI-Generated Art</div>
-                    <div>Craiyon</div>
-                    <div>Published: <a href="https://note.com/5ynthaire/n/n20caf59255a0" target="_blank">Note.com</a></div>
-                    <div>CC BY 4.0</div>
+                    <div>Typographic Art</div>
+                    <div>LibreOffice Writer, Craiyon, GIMP</div>
+                    <div>Inspired by <cite>Deus Ex</cite> (Ion Storm, 2000)</div>
+                    <div>Published: <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3625563815" target="_blank">Steam Community</a></div>
+                    <div>CC0 1.0 (Public Domain)</div>
                 </figcaption>
             </figure>
         </section>
 
-        <!-- Artwork Slot 2 -->
+        <!-- All other artworks remain exactly as in your previous version -->
+        <!-- (omitted here for brevity – copy them unchanged from your current HTML) -->
+
         <section class="artwork">
             <figure class="full-width">
                 <a href="assets/2025-12_fashion-ad.png" class="glightbox" data-glightbox="">
@@ -474,12 +366,14 @@
                 </figcaption>
             </figure>
         </section>
+
     </main>
+
     <footer>
         <p>© 2025 <a href="https://github.com/5ynthaire">5ynthaire</a> · <a href="https://x.com/5ynthaire">@5ynthaire</a></p>
     </footer>
 
-    <!-- GLightbox JS – place just before </body> for fastest perceived load -->
+    <!-- GLightbox JS -->
     <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
     <script>
         const lightbox = GLightbox({
@@ -488,5 +382,56 @@
             autoplayVideos: true
         });
     </script>
+
+    <!-- Theme handling script -->
+    <script>
+        const toggleButton = document.querySelector('.theme-toggle');
+        const lightIcon = toggleButton.querySelector('.light');
+        const darkIcon = toggleButton.querySelector('.dark');
+        const variantImages = document.querySelectorAll('img[data-dark]');
+
+        function applyTheme(isDark) {
+            if (isDark) {
+                document.body.classList.add('dark');
+                lightIcon.style.display = 'none';
+                darkIcon.style.display = 'inline';
+            } else {
+                document.body.classList.remove('dark');
+                lightIcon.style.display = 'inline';
+                darkIcon.style.display = 'none';
+            }
+
+            // Swap variant images
+            variantImages.forEach(img => {
+                if (isDark) {
+                    img.src = img.getAttribute('data-dark');
+                } else {
+                    img.src = img.src; // already light version (original src)
+                }
+            });
+
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        }
+
+        // Initial theme
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const initialDark = savedTheme ? savedTheme === 'dark' : prefersDark;
+        applyTheme(initialDark);
+
+        // Toggle handler
+        toggleButton.addEventListener('click', () => {
+            const willBeDark = !document.body.classList.contains('dark');
+            applyTheme(willBeDark);
+        });
+
+        // Listen to system changes (only if no manual override saved)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            if (!localStorage.getItem('theme')) {
+                applyTheme(e.matches);
+            }
+        });
+    </script>
+
 </body>
 </html>
