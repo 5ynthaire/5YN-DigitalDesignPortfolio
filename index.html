@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>5ynthaire Gallery</title>
+    <title>5YNTHAIRE GALLERY</title>
     <meta name="description" content="Digital artworks by 5ynthaire – human-AI synergy, provocation, synthetic aesthetics.">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@300;400;600&family=Montserrat:wght@600&family=Plus+Jakarta+Sans:wght@300;400;600&family=Public+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- Basic reset and styling -->
     <style>
         :root {
@@ -24,11 +26,34 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Inter", Roboto, Helvetica, Arial, sans-serif;
             background: var(--bg);
             color: var(--text);
             line-height: 1.6;
             transition: background 0.3s ease, color 0.3s ease;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            
+            /* TEST ONE AT A TIME: */
+            /* font-family: 'Host Grotesk', sans-serif; */ /* Option A: Boutique / Modern */
+            /* font-family: 'Plus Jakarta Sans', sans-serif; */ /* Option B: Clean / Airy */
+            font-family: 'Public Sans', sans-serif; /* Option C: Neutral / Invisible */
+        
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7; /* Increased for breathing room */
+            font-weight: 300; /* Light weight looks more high-end */
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        
+        figcaption {
+            margin-top: 1.8rem;
+            font-size: 0.85rem; /* Slightly smaller for gallery label feel */
+            line-height: 1.8;
+            letter-spacing: 0.02em; /* Gives that "quiet" spaced-out look */
+            opacity: 0.8;
         }
         
         header, main, footer {
@@ -45,6 +70,7 @@
         }
         
         h1 {
+            font-family: "Montserrat";
             margin: 0;
             font-size: 2.2rem;
             font-weight: 600;
@@ -106,13 +132,8 @@
             border-color: #111;
         }
         
-        figcaption {
-            margin-top: 1.8rem;
-            font-size: 0.95rem;
-            opacity: 0.8;
-        }
-        
         .title {
+            font-family: 'Host Grotesk', sans-serif;
             font-weight: 600;
             font-size: 1.1rem;
             margin-bottom: 0.4rem;
@@ -136,7 +157,7 @@
 <body>
 
     <header>
-        <h1>5ynthaire Gallery</h1>
+        <h1>5YNTHAIRE GALLERY</h1>
         <p class="tagline">Digital artworks exploring human–AI synergy</p>
         <button class="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">
             <span class="light">☀️</span>
@@ -321,7 +342,7 @@
                     <img src="assets/2025-12_academia.png" alt="Kyoto University ×Dark Souls Crossover">
                 </a>
                 <figcaption>
-                    <div class="title">Kyoto University ×Dark Souls Crossover</div>
+                    <div class="title">Kyoto University × Dark Souls Crossover</div>
                     <div>December 2025</div>
                     <div>AI-Generated Art</div>
                     <div>Craiyon</div>
@@ -502,8 +523,142 @@
                 </figcaption>
             </figure>
         </section>
+        <section class="artwork">
+            <figure class="framed">
+                <a href="assets/2025-12_substack.jpg" class="glightbox" data-glightbox="">
+                    <img src="assets/2025-12_substack.jpg" alt="Substack Welcome Page Logo">
+                </a>
+                <figcaption>
+                    <div class="title">Substack Welcome Page Logo</div>
+                    <div>December 2025</div>
+                    <div>Branding Image</div>
+                    <div>Grok Imagine, GIMP</div>
+                    <div>Published: <a href="https://5ynthaire.substack.com/" target="_blank">Substack</a></div>
+                    <div>CC BY 4.0</div>
+                </figcaption>
+            </figure>
+        </section>
+        <section class="artwork">
+            <figure class="full-width">
+                <a href="assets/2026-01_miyako-prose-artbook.jpg" class="glightbox" data-glightbox="">
+                    <img src="assets/2026-01_miyako-prose-artbook.jpg" alt="Introducing Miyako Prose">
+                </a>
+                <figcaption>
+                    <div class="title">Introducing Miyako Prose</div>
+                    <div>January 2026</div>
+                    <div>Faux Art Museum Exhibit Book</div>
+                    <div>Grok Imagine, Inkscape, GIMP</div>
+                    <div>Published: <a href="https://note.com/5ynthaire/n/nbb945345ce2f" target="_blank">Note.com</a></div>
+                    <div>CC BY 4.0</div>
+                </figcaption>
+            </figure>
+        </section>
+        <section class="artwork">
+            <figure class="framed">
+                <a href="assets/2026-01_01-rashomon.jpg" class="glightbox" data-glightbox="">
+                    <img src="assets/2026-01_01-rashomon.jpg" alt="Burning Rashomon">
+                </a>
+                <figcaption>
+                    <div class="title">Burning Rashomon</div>
+                    <div>January 2026</div>
+                    <div>Digital Art</div>
+                    <div>Grok Imagine</div>
+                    <div>Published: <a href="https://note.com/5ynthaire/n/nbb945345ce2f" target="_blank">Note.com</a></div>
+                    <div>CC BY 4.0</div>
+                </figcaption>
+            </figure>
+        </section>
+        <section class="artwork">
+            <figure class="full-width">
+                <a href="assets/2026-01_10-ronin_bw.jpg" class="glightbox" data-glightbox="">
+                    <img src="assets/2026-01_10-ronin_bw.jpg" alt="Departing Ronin">
+                </a>
+                <figcaption>
+                    <div class="title">Departing Ronin</div>
+                    <div>January 2026</div>
+                    <div>Digital Art</div>
+                    <div>Grok Imagine</div>
+                    <div>Published: <a href="https://note.com/5ynthaire/n/nbb945345ce2f" target="_blank">Note.com</a></div>
+                    <div>CC BY 4.0</div>
+                </figcaption>
+            </figure>
+        </section>
+        <section class="artwork">
+            <figure class="framed">
+                <a href="assets/2026-01_beauty-in-brutality.jpg" class="glightbox" data-glightbox="">
+                    <img src="assets/2026-01_beauty-in-brutality.jpg" alt="Beauty in Brutality">
+                </a>
+                <figcaption>
+                    <div class="title">Beauty in Brutality</div>
+                    <div>January 2026</div>
+                    <div>Digital Art</div>
+                    <div>Grok Imagine</div>
+                    <div>Published: <a href="https://note.com/5ynthaire/n/nbb945345ce2f" target="_blank">Note.com</a></div>
+                    <div>CC BY 4.0</div>
+                </figcaption>
+            </figure>
+        </section>
+        <section class="artwork">
+            <figure class="full-width">
+                <a href="assets/2026-01_omote-ura.png" class="glightbox" data-glightbox="">
+                    <img src="assets/2026-01_omote-ura.png" alt="Omote-Ura: A Study in Duality">
+                </a>
+                <figcaption>
+                    <div class="title"><cite>Omote-Ura</cite>: A Study in Duality</div>
+                    <div>January 2026</div>
+                    <div>Digital Art</div>
+                    <div>Grok Imagine</div>
+                    <div>Published: <a href="https://note.com/5ynthaire/n/nbb945345ce2f" target="_blank">Note.com</a></div>
+                    <div>CC BY 4.0</div>
+                </figcaption>
+            </figure>
+        </section>
+        <section class="artwork">
+            <figure class="framed">
+                <a href="assets/2026-01_09-catherine.jpg" class="glightbox" data-glightbox="">
+                    <img src="assets/2026-01_09-catherine.jpg" alt="Catherine in a Kimono">
+                </a>
+                <figcaption>
+                    <div class="title">Catherine in a Kimono</div>
+                    <div>January 2026</div>
+                    <div>Digital Art</div>
+                    <div>Grok Imagine</div>
+                    <div>Published: <a href="https://note.com/5ynthaire/n/nbb945345ce2f" target="_blank">Note.com</a></div>
+                    <div>CC BY 4.0</div>
+                </figcaption>
+            </figure>
+        </section>
+        <section class="artwork">
+            <figure class="framed">
+                <a href="assets/2026-01_18_us_blade_runner_3.jpg" class="glightbox" data-glightbox="">
+                    <img src="assets/2026-01_18_us_blade_runner_3.jpg" alt="Debt of Gratitude">
+                </a>
+                <figcaption>
+                    <div class="title">Debt of Gratitude</div>
+                    <div>January 2026</div>
+                    <div>Digital Art</div>
+                    <div>Grok Imagine</div>
+                    <div>Published: <a href="https://note.com/5ynthaire/n/nbb945345ce2f" target="_blank">Note.com</a></div>
+                    <div>CC BY 4.0</div>
+                </figcaption>
+            </figure>
+        </section>
+        <section class="artwork">
+            <figure class="framed">
+                <a href="assets/2026-01_miyako-prose-banner.jpg" class="glightbox" data-glightbox="">
+                    <img src="assets/2026-01_miyako-prose-banner.jpg" alt="Miyako Prose">
+                </a>
+                <figcaption>
+                    <div class="title">Miyako Prose</div>
+                    <div>January 2026</div>
+                    <div>Digital Art</div>
+                    <div>Grok Imagine</div>
+                    <div>Published: <a href="https://note.com/5ynthaire/n/nbb945345ce2f" target="_blank">Note.com</a></div>
+                    <div>CC BY 4.0</div>
+                </figcaption>
+            </figure>
+        </section>
     </main>
-
     <footer>
         <p>© 2025 <a href="https://github.com/5ynthaire">5ynthaire</a> · <a href="https://x.com/5ynthaire">@5ynthaire</a></p>
     </footer>
