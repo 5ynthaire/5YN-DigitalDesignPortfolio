@@ -173,155 +173,162 @@
     </script>
 
     <!-- Embedded gallery generation + theme script (all JS in one block for simplicity) -->
-    <script>
-        const main = document.getElementById('gallery-main');
-        const toggleButton = document.querySelector('.theme-toggle');
-        const lightIcon = toggleButton.querySelector('.light');
-        const darkIcon = toggleButton.querySelector('.dark');
 
-        // Theme handling (preserved from your version)
-        function applyTheme(isDark) {
-            if (isDark) {
-                document.body.classList.add('dark');
-                lightIcon.style.display = 'none';
-                darkIcon.style.display = 'inline';
-            } else {
-                document.body.classList.remove('dark');
-                lightIcon.style.display = 'inline';
-                darkIcon.style.display = 'none';
+<script>
+    const main = document.getElementById('gallery-main');
+    const toggleButton = document.querySelector('.theme-toggle');
+    const lightIcon = toggleButton.querySelector('.light');
+    const darkIcon = toggleButton.querySelector('.dark');
+
+    // Separate function for swapping dark variants
+    function swapDarkVariants(isDark) {
+        document.querySelectorAll('img[data-dark]').forEach(img => {
+            if (isDark && img.dataset.dark) {
+                // Store original if not already (for toggle back)
+                if (!img.dataset.original) img.dataset.original = img.src;
+                img.src = img.dataset.dark;
+            } else if (img.dataset.original) {
+                img.src = img.dataset.original;
             }
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+    }
 
-            // Swap dark variants
-            document.querySelectorAll('img[data-dark]').forEach(img => {
-                if (isDark && img.dataset.dark) {
-                    img.src = img.dataset.dark;
-                } else {
-                    // Restore light version on toggle back (stored in dataset.original)
-                    if (img.dataset.original) img.src = img.dataset.original;
-                }
-            });
+    // Theme apply (now calls swap after images exist when possible)
+    function applyTheme(isDark) {
+        if (isDark) {
+            document.body.classList.add('dark');
+            lightIcon.style.display = 'none';
+            darkIcon.style.display = 'inline';
+        } else {
+            document.body.classList.remove('dark');
+            lightIcon.style.display = 'inline';
+            darkIcon.style.display = 'none';
         }
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
 
-        const savedTheme = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const initialDark = savedTheme ? savedTheme === 'dark' : prefersDark;
-        applyTheme(initialDark);
+        // Immediate swap if images already loaded
+        swapDarkVariants(isDark);
+    }
 
-        toggleButton.addEventListener('click', () => {
-            const willBeDark = !document.body.classList.contains('dark');
-            applyTheme(willBeDark);
-        });
+    // Initial theme
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const initialDark = savedTheme ? savedTheme === 'dark' : prefersDark;
+    applyTheme(initialDark);  // Early apply for body class (background/text)
 
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-            if (!localStorage.getItem('theme')) applyTheme(e.matches);
-        });
+    toggleButton.addEventListener('click', () => {
+        const willBeDark = !document.body.classList.contains('dark');
+        applyTheme(willBeDark);
+    });
 
-        // Gallery population
-        async function loadGallery() {
-            try {
-                const [dataResp, layoutResp] = await Promise.all([
-                    fetch('data/data.yaml'),
-                    fetch('data/layout.yaml')
-                ]);
-                const [dataText, layoutText] = await Promise.all([
-                    dataResp.text(),
-                    layoutResp.text()
-                ]);
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        if (!localStorage.getItem('theme')) applyTheme(e.matches);
+    });
 
-                const data = jsyaml.load(dataText).artworks;
-                const layoutOrder = jsyaml.load(layoutText).gallery_order;
+    // Gallery load
+    async function loadGallery() {
+        try {
+            const [dataResp, layoutResp] = await Promise.all([
+                fetch('data/data.yaml'),
+                fetch('data/layout.yaml')
+            ]);
+            const [dataText, layoutText] = await Promise.all([
+                dataResp.text(),
+                layoutResp.text()
+            ]);
 
-                // Build families map: parent_id → [artwork objects sorted by doc_id]
-                const families = {};
-                Object.values(data).forEach(art => {
-                    const parent = art.parent_id;
-                    if (!families[parent]) families[parent] = [];
-                    families[parent].push(art);
-                });
-                Object.keys(families).forEach(parent => {
-                    families[parent].sort((a, b) => a.doc_id.localeCompare(b.doc_id));
-                });
+            const data = jsyaml.load(dataText).artworks;
+            const layoutOrder = jsyaml.load(layoutText).gallery_order;
 
-                main.innerHTML = ''; // Clear loading message
+            const families = {};
+            Object.values(data).forEach(art => {
+                const parent = art.parent_id;
+                if (!families[parent]) families[parent] = [];
+                families[parent].push(art);
+            });
+            Object.keys(families).forEach(parent => {
+                families[parent].sort((a, b) => a.doc_id.localeCompare(b.doc_id));
+            });
 
-                layoutOrder.forEach(parentId => {
-                    const family = families[parentId];
-                    if (!family) {
-                        console.warn(`Missing family for parent_id: ${parentId}`);
-                        return;
+            main.innerHTML = '';
+
+            layoutOrder.forEach(parentId => {
+                const family = families[parentId];
+                if (!family) {
+                    console.warn(`Missing family for parent_id: ${parentId}`);
+                    return;
+                }
+
+                family.forEach(art => {
+                    const section = document.createElement('section');
+                    section.className = 'artwork';
+
+                    const figure = document.createElement('figure');
+                    figure.className = art.presentation || 'framed';
+
+                    const a = document.createElement('a');
+                    a.href = art.image;
+                    a.className = 'glightbox';
+
+                    const img = document.createElement('img');
+                    img.src = art.image;  // Initial light
+                    img.alt = art.alt;
+                    if (art.dark_variant) {
+                        img.dataset.dark = art.dark_variant;
+                        img.dataset.original = art.image;  // Always store light as original
+                    }
+                    if (art.background) img.style.backgroundColor = art.background;
+
+                    a.appendChild(img);
+                    figure.appendChild(a);
+
+                    const figcaption = document.createElement('figcaption');
+
+                    const fieldsOrder = ['title', 'date', 'category', 'tools', 'published', 'license'];
+                    const fieldDisplay = {
+                        title: () => `<div class="title">${art.title}</div>`,
+                        date: () => `<div>${art.date}</div>`,
+                        category: () => `<div>${art.category}</div>`,
+                        tools: () => art.tools ? `<div>${art.tools}</div>` : '',
+                        published: () => art.published.url 
+                            ? `<div>Published: <a href="${art.published.url}" target="_blank">${art.published.text}</a></div>`
+                            : `<div>Published: ${art.published.text}</div>`,
+                        license: () => `<div>${art.license}</div>`
+                    };
+
+                    let extraIndex = 0;
+                    fieldsOrder.forEach(field => {
+                        if (art.extra_lines && extraIndex < art.extra_lines.length && art.extra_lines[extraIndex].after === field) {
+                            figcaption.innerHTML += `<div>${art.extra_lines[extraIndex].text}</div>`;
+                            extraIndex++;
+                        }
+                        if (fieldDisplay[field]) figcaption.innerHTML += fieldDisplay[field]();
+                    });
+                    if (art.extra_lines) {
+                        for (; extraIndex < art.extra_lines.length; extraIndex++) {
+                            figcaption.innerHTML += `<div>${art.extra_lines[extraIndex].text}</div>`;
+                        }
                     }
 
-                    family.forEach(art => {
-                        const section = document.createElement('section');
-                        section.className = 'artwork';
-
-                        const figure = document.createElement('figure');
-                        figure.className = art.presentation || 'framed';
-
-                        const a = document.createElement('a');
-                        a.href = art.image;
-                        a.className = 'glightbox';
-
-                        const img = document.createElement('img');
-                        img.src = art.image;
-                        img.alt = art.alt;
-                        if (art.dark_variant) {
-                            img.dataset.dark = art.dark_variant;
-                            img.dataset.original = art.image; // Store light version
-                        }
-                        if (art.background) img.style.backgroundColor = art.background;
-
-                        a.appendChild(img);
-                        figure.appendChild(a);
-
-                        const figcaption = document.createElement('figcaption');
-
-                        const fieldsOrder = ['title', 'date', 'category', 'tools', 'published', 'license'];
-                        const fieldDisplay = {
-                            title: () => `<div class="title">${art.title}</div>`,
-                            date: () => `<div>${art.date}</div>`,
-                            category: () => `<div>${art.category}</div>`,
-                            tools: () => art.tools ? `<div>${art.tools}</div>` : '',
-                            published: () => art.published.url 
-                                ? `<div>Published: <a href="${art.published.url}" target="_blank">${art.published.text}</a></div>`
-                                : `<div>Published: ${art.published.text}</div>`,
-                            license: () => `<div>${art.license}</div>`
-                        };
-
-                        // Build figcaption with extra_lines support
-                        let extraIndex = 0;
-                        fieldsOrder.forEach(field => {
-                            if (art.extra_lines && extraIndex < art.extra_lines.length && art.extra_lines[extraIndex].after === field) {
-                                figcaption.innerHTML += `<div>${art.extra_lines[extraIndex].text}</div>`;
-                                extraIndex++;
-                            }
-                            if (fieldDisplay[field]) figcaption.innerHTML += fieldDisplay[field]();
-                        });
-                        // Remaining extras
-                        if (art.extra_lines) {
-                            for (; extraIndex < art.extra_lines.length; extraIndex++) {
-                                figcaption.innerHTML += `<div>${art.extra_lines[extraIndex].text}</div>`;
-                            }
-                        }
-
-                        figure.appendChild(figcaption);
-                        section.appendChild(figure);
-                        main.appendChild(section);
-                    });
+                    figure.appendChild(figcaption);
+                    section.appendChild(figure);
+                    main.appendChild(section);
                 });
+            });
 
-                // Re-init lightbox after dynamic content
-                lightbox.reload();
-            } catch (err) {
-                main.innerHTML = '<p style="text-align:center; color:red;">Error loading gallery data. Check console.</p>';
-                console.error(err);
-            }
+            // Critical: Swap variants AFTER population
+            swapDarkVariants(document.body.classList.contains('dark'));
+
+            // Re-init lightbox
+            lightbox.reload();
+        } catch (err) {
+            main.innerHTML = '<p style="text-align:center; color:red;">Error loading gallery data. Check console.</p>';
+            console.error(err);
         }
+    }
 
-        // Load on DOM ready
-        document.addEventListener('DOMContentLoaded', loadGallery);
-    </script>
+    document.addEventListener('DOMContentLoaded', loadGallery);
+</script>
 
 </body>
 </html>
