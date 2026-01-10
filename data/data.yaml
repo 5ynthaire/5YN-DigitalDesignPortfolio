@@ -1,0 +1,504 @@
+---
+artworks:
+  202506-001-001:
+    doc_id: 202506-001-001
+    parent_id: 202506-001-001
+    title: 5YNTHAIRE Logo Type
+    date: June 2025
+    category: Brand Identity
+    tools: Inkscape
+    published:
+      text: Content creator project
+      url: null
+    license: CC BY 4.0
+    image: assets/2025-06_brand-logo.svg
+    dark_variant: null
+    background: white
+    presentation: framed
+    alt: Brand Logo
+  202506-002-001:
+    doc_id: 202506-002-001
+    parent_id: 202506-002-001
+    title: Link Tree
+    date: June 2025—October 2025
+    category: Web Landing Page Design
+    tools: Inkscape, GIMP, Craiyon, Grok 4 (xAI)
+    published:
+      text: 5ynthaire.com
+      url: https://5ynthaire.com
+    license: CC BY 4.0
+    image: assets/2025-10_link-tree.png
+    dark_variant: null
+    background: null
+    presentation: full
+    alt: Link Tree
+  202507-001-001:
+    doc_id: 202507-001-001
+    parent_id: 202507-001-001
+    title: Canvas-Lattice Engine
+    date: July 2025
+    category: Conceptual Schematic
+    tools: Inkscape, GIMP
+    published:
+      text: DOI:10.5281/zenodo.17311913
+      url: https://doi.org/10.5281/zenodo.17311913
+    license: CC BY 4.0
+    image: assets/2025-06_canvas-lattice-engine_light.png
+    dark_variant: assets/2025-06_canvas-lattice-engine_dark.png
+    background: null
+    presentation: full
+    alt: Canvas-Lattice Engine
+  202507-002-001:
+    doc_id: 202507-002-001
+    parent_id: 202507-002-001
+    title: Try Me button
+    date: July 2025
+    category: UI Element
+    tools: Craiyon, GIMP
+    published:
+      text: "X - Canvas-Lattice Engine: Unleashing AI’s Abstract Reasoning Power"
+      url: https://x.com/5ynthaire/status/1943296242383024204
+    license: CC BY 4.0
+    image: assets/2025-07_try_me.png
+    dark_variant: null
+    background: null
+    presentation: full
+    alt: Try Me button
+  202507-003-001:
+    doc_id: 202507-003-001
+    parent_id: 202507-003-001
+    title: Visualization of Logical Sinkhole
+    date: July 2025
+    category: Conceptual Diagram
+    tools: Python, Grok 4 (xAI), GIMP
+    published:
+      text: X - Visualizing Collapse of Meaning Near Paradoxical Statements With AI
+      url: https://x.com/5ynthaire/status/1943296242383024204
+    license: CC BY 4.0
+    image: assets/2025-07_logical-sinkhole.png
+    dark_variant: null
+    background: null
+    presentation: full
+    alt: Visualization of Logical Sinkhole
+  202509-001-001:
+    doc_id: 202509-001-001
+    parent_id: 202509-001-001
+    title: Decision Hell
+    date: September 2025
+    category: Pop Art
+    tools: Craiyon
+    published:
+      text: Note.com
+      url: https://note.com/5ynthaire/n/n968703202ba2
+    license: CC BY 4.0
+    image: assets/2025-09_decision-hell.webp
+    dark_variant: null
+    background: null
+    presentation: framed
+    alt: Decision Hell
+  202510-001-001:
+    doc_id: 202510-001-001
+    parent_id: 202510-001-001
+    title: Information Kernel Framework
+    date: October 2025
+    category: Conceptual Schematic
+    tools: Inkscape
+    published:
+      text: DOI:10.5281/zenodo.17274202
+      url: https://github.com/5ynthaire/5YN-InformationKernelLLMHallucinationControl-Idea
+    license: CC BY 4.0
+    image: assets/2025-09_information-kernel-framework_light.png
+    dark_variant: assets/2025-09_information-kernel-framework_dark.png
+    background: null
+    presentation: full
+    alt: Information Kernel Framework
+  202510-002-001:
+    doc_id: 202510-002-001
+    parent_id: 202510-002-001
+    title: Hallucinating AI
+    date: October 2025
+    category: Pop Art
+    tools: Craiyon
+    published:
+      text: "X - Mode B: Alternative Human-AI engagement mode for power users"
+      url: https://x.com/5ynthaire/status/2001762487985746429
+    license: CC BY 4.0
+    image: assets/2025-10_hallucinating-ai.png
+    dark_variant: null
+    background: null
+    presentation: framed
+    alt: Hallucinating AI
+  202510-003-001:
+    doc_id: 202510-003-001
+    parent_id: 202510-003-001
+    title: Color Synth Lite
+    date: October 2025
+    category: Web Design
+    tools: Grok 4 (xAI)
+    published:
+      text: GitHub
+      url: https://5ynthaire.github.io/5YN-ColorSynthLite-HTML/
+    license: CC BY 4.0
+    image: assets/2025-10_color-synth-lite.png
+    dark_variant: null
+    background: null
+    presentation: full
+    alt: Color Synth Lite
+  202510-004-001:
+    doc_id: 202510-004-001
+    parent_id: 202510-004-001
+    title: Miura Fold Output Example
+    date: October 2025
+    category: Origami Pattern
+    tools: Python, Grok 4 (xAI), Inkscape
+    published:
+      text: GitHub
+      url: https://github.com/5ynthaire/5YN-MiuraFoldPatternGen-PY
+    license: CC BY 4.0
+    image: assets/2025-10_miura_light.svg
+    dark_variant: assets/2025-10_miura_dark.svg
+    background: null
+    presentation: full
+    alt: Miura Fold Output Example
+  202512-001-001:
+    doc_id: 202512-001-001
+    parent_id: 202512-001-001
+    title: Kyoto University × Dark Souls Crossover
+    date: December 2025
+    category: AI-Generated Art
+    tools: Craiyon
+    published:
+      text: Note.com
+      url: https://note.com/5ynthaire/n/nc70f89d7aa8e
+    license: CC BY 4.0
+    image: assets/2025-12_academia.png
+    dark_variant: null
+    background: null
+    presentation: full
+    alt: Kyoto University ×Dark Souls Crossover
+  202512-002-001:
+    doc_id: 202512-002-001
+    parent_id: 202512-002-001
+    title: <cite>The True Way</cite> Typographic Art
+    date: December 2025
+    category: Typographic Art
+    tools: LibreOffice Writer, Craiyon, GIMP
+    extra_lines:
+      - after: tools
+        text: Inspired by <cite>Deus Ex</cite> (Ion Storm, 2000)
+    published:
+      text: Steam Community
+      url: https://steamcommunity.com/sharedfiles/filedetails/?id=3625563815
+    license: CC0 1.0 (Public Domain)
+    image: assets/2025-12_the-true-way.jpg
+    dark_variant: null
+    background: null
+    presentation: full
+    alt: Typography
+  202512-003-001:
+    doc_id: 202512-003-001
+    parent_id: 202512-003-001
+    title: "Mode B: Alternative Mode of Human-LLM Engagement"
+    date: December 2025
+    category: AI-Generated Art
+    tools: Craiyon
+    published:
+      text: "X - Mode B: Alternative Human-AI engagement mode for power users"
+      url: https://x.com/5ynthaire/status/2001762487985746429
+    license: CC BY 4.0
+    image: assets/2025-12_mode-b.png
+    dark_variant: null
+    background: null
+    presentation: framed
+    alt: "Mode B: Alternative Mode of Human-LLM Engagement"
+  202512-004-001:
+    doc_id: 202512-004-001
+    parent_id: 202512-004-001
+    title: Rene Descartes Rookie Card ($0.25)
+    date: December 2025
+    category: Satirical AI-Generated Art
+    tools: Craiyon
+    published:
+      text: X - Why don’t we define the ability to throw a baseball as the defining
+        human trait?
+      url: https://x.com/5ynthaire/status/1999495235441750191
+    license: CC BY 4.0
+    image: assets/2025-12_descartes.png
+    dark_variant: null
+    background: null
+    presentation: framed
+    alt: Rene Descartes Rookie Card ($0.25)
+  202512-005-001:
+    doc_id: 202512-005-001
+    parent_id: 202512-005-001
+    title: I throw, therefore I am.
+    date: December 2025
+    category: AI-Generated Art
+    tools: Craiyon
+    published:
+      text: Note.com
+      url: https://note.com/5ynthaire/n/nf35da255120a
+    license: CC BY 4.0
+    image: assets/2025-12_javelin-thrower.png
+    dark_variant: null
+    background: null
+    presentation: framed
+    alt: I throw, therefore I am.
+  202512-006-001:
+    doc_id: 202512-006-001
+    parent_id: 202512-006-001
+    title: Ghost from Gears
+    date: December 2025
+    category: AI-Generated Art
+    tools: Craiyon
+    published:
+      text: Note.com
+      url: https://note.com/5ynthaire/n/n20caf59255a0
+    license: CC BY 4.0
+    image: assets/2025-12_ghost-from-gears.png
+    dark_variant: null
+    background: null
+    presentation: framed
+    alt: Ghost from Gears
+  202512-007-001:
+    doc_id: 202512-006-002
+    parent_id: 202512-006-001
+    title: Study of Digital Noise
+    date: December 2025
+    category: AI-Generated Art
+    tools: Craiyon
+    published:
+      text: Note.com
+      url: https://note.com/5ynthaire/n/n20caf59255a0
+    license: CC BY 4.0
+    image: assets/2025-12_study-of-digital-noise.png
+    dark_variant: null
+    background: null
+    presentation: full
+    alt: Study of Digital Noise
+  202512-008-001:
+    doc_id: 202512-006-003
+    parent_id: 202512-006-001
+    title: Self Portrait
+    date: December 2025
+    category: AI-Generated Art
+    tools: Craiyon, Grok Imagine (xAI)
+    published:
+      text: Note.com
+      url: https://note.com/5ynthaire/n/n20caf59255a0
+    license: CC BY 4.0
+    image: assets/2025-12_self-portrait.png
+    dark_variant: null
+    background: null
+    presentation: framed
+    alt: Self Portrait
+  202512-009-001:
+    doc_id: 202512-006-004
+    parent_id: 202512-006-001
+    title: Memory Fragments
+    date: December 2025
+    category: AI-Generated Art
+    tools: Craiyon
+    published:
+      text: Note.com
+      url: https://note.com/5ynthaire/n/n20caf59255a0
+    license: CC BY 4.0
+    image: assets/2025-12_memory_fragments.png
+    dark_variant: null
+    background: null
+    presentation: framed
+    alt: Memory Fragments
+  202512-010-001:
+    doc_id: 202512-006-005
+    parent_id: 202512-006-001
+    title: VEXLEY // 5YNTHETIC (Lookbook Spread)
+    date: December 2025
+    category: Faux Fashion Lookbook Spread
+    tools: Perchance.org, Grok Imagine (xAI), GIMP, Inkscape, Gemini (Google)
+    published:
+      text: Note.com
+      url: https://note.com/5ynthaire/n/n20caf59255a0
+    license: CC BY 4.0
+    image: assets/2025-12_fashion-ad.png
+    dark_variant: null
+    background: null
+    presentation: full
+    alt: VEXLEY // 5YNTHETIC
+  202512-011-001:
+    doc_id: 202512-007-001
+    parent_id: 202512-007-001
+    title: "\"I'm more enlightened than you because I see the world as infinite
+      anecdotes.\""
+    date: December 2025
+    category: Satirical AI-Generated Art
+    tools: Craiyon, GIMP
+    published:
+      text: X - A prompt to kill 'NPR Speak'
+      url: https://x.com/5ynthaire/status/2005578852039299583
+    license: CC BY 4.0
+    image: assets/2025-12_performative-complexity.jpg
+    dark_variant: null
+    background: null
+    presentation: full
+    alt: I'm more enlightened than you because I see the world as infinite
+      anecdotes.
+  202512-012-001:
+    doc_id: 202512-012-001
+    parent_id: 202512-012-001
+    title: Social Media Banner
+    date: December 2025
+    category: Branding Image
+    tools: Grok Imagine, GIMP
+    published:
+      text: X.com
+      url: https://x.com/_5ynthaire/
+    license: CC BY 4.0
+    image: assets/2025-12_x-japan.jfif
+    dark_variant: null
+    background: null
+    presentation: full
+    alt: Social Media Banner
+  202512-013-001:
+    doc_id: 202512-013-001
+    parent_id: 202512-013-001
+    title: Substack Welcome Page Logo
+    date: December 2025
+    category: Branding Image
+    tools: Grok Imagine, GIMP
+    published:
+      text: Substack
+      url: https://5ynthaire.substack.com/
+    license: CC BY 4.0
+    image: assets/2025-12_substack.jpg
+    dark_variant: null
+    background: null
+    presentation: framed
+    alt: Substack Welcome Page Logo
+  202601-001-001:
+    doc_id: 202601-001-001
+    parent_id: 202601-001-001
+    title: Introducing Miyako Prose
+    date: January 2026
+    category: Faux Art Museum Exhibit Book
+    tools: Grok Imagine, Inkscape, GIMP
+    published:
+      text: Note.com
+      url: https://note.com/5ynthaire/n/nbb945345ce2f
+    license: CC BY 4.0
+    image: assets/2026-01_miyako-prose-artbook.jpg
+    dark_variant: null
+    background: null
+    presentation: full
+    alt: Introducing Miyako Prose
+  202601-001-002:
+    doc_id: 202601-001-002
+    parent_id: 202601-001-001
+    title: Burning Rashomon
+    date: January 2026
+    category: Digital Art
+    tools: Grok Imagine
+    published:
+      text: Note.com
+      url: https://note.com/5ynthaire/n/nbb945345ce2f
+    license: CC BY 4.0
+    image: assets/2026-01_01-rashomon.jpg
+    dark_variant: null
+    background: null
+    presentation: framed
+    alt: Burning Rashomon
+  202601-001-003:
+    doc_id: 202601-001-003
+    parent_id: 202601-001-001
+    title: Departing Ronin
+    date: January 2026
+    category: Digital Art
+    tools: Grok Imagine
+    published:
+      text: Note.com
+      url: https://note.com/5ynthaire/n/nbb945345ce2f
+    license: CC BY 4.0
+    image: assets/2026-01_10-ronin_bw.jpg
+    dark_variant: null
+    background: null
+    presentation: full
+    alt: Departing Ronin
+  202601-001-004:
+    doc_id: 202601-001-004
+    parent_id: 202601-001-001
+    title: Beauty in Brutality
+    date: January 2026
+    category: Digital Art
+    tools: Grok Imagine
+    published:
+      text: Note.com
+      url: https://note.com/5ynthaire/n/nbb945345ce2f
+    license: CC BY 4.0
+    image: assets/2026-01_beauty-in-brutality.jpg
+    dark_variant: null
+    background: null
+    presentation: framed
+    alt: Beauty in Brutality
+  202601-001-005:
+    doc_id: 202601-001-005
+    parent_id: 202601-001-001
+    title: "<cite>Omote-Ura</cite>: A Study in Duality"
+    date: January 2026
+    category: Digital Art
+    tools: Grok Imagine
+    published:
+      text: Note.com
+      url: https://note.com/5ynthaire/n/nbb945345ce2f
+    license: CC BY 4.0
+    image: assets/2026-01_omote-ura.png
+    dark_variant: null
+    background: null
+    presentation: full
+    alt: "Omote-Ura: A Study in Duality"
+  202601-001-006:
+    doc_id: 202601-001-006
+    parent_id: 202601-001-001
+    title: Catherine in a Kimono
+    date: January 2026
+    category: Digital Art
+    tools: Grok Imagine
+    published:
+      text: Note.com
+      url: https://note.com/5ynthaire/n/nbb945345ce2f
+    license: CC BY 4.0
+    image: assets/2026-01_09-catherine.jpg
+    dark_variant: null
+    background: null
+    presentation: framed
+    alt: Catherine in a Kimono
+  202601-001-007:
+    doc_id: 202601-001-007
+    parent_id: 202601-001-001
+    title: Debt of Gratitude
+    date: January 2026
+    category: Digital Art
+    tools: Grok Imagine
+    published:
+      text: Note.com
+      url: https://note.com/5ynthaire/n/nbb945345ce2f
+    license: CC BY 4.0
+    image: assets/2026-01_18_us_blade_runner_3.jpg
+    dark_variant: null
+    background: null
+    presentation: framed
+    alt: Debt of Gratitude
+  202601-001-008:
+    doc_id: 202601-001-008
+    parent_id: 202601-001-001
+    title: Miyako Prose
+    date: January 2026
+    category: Digital Art
+    tools: Grok Imagine
+    published:
+      text: Note.com
+      url: https://note.com/5ynthaire/n/nbb945345ce2f
+    license: CC BY 4.0
+    image: assets/2026-01_miyako-prose-banner.jpg
+    dark_variant: null
+    background: null
+    presentation: framed
+    alt: Miyako Prose
