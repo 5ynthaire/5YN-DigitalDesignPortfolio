@@ -241,7 +241,8 @@
             const layoutOrder = jsyaml.load(layoutText).gallery_order;
 
             const families = {};
-            Object.values(data).forEach(art => {
+            Object.entries(data).forEach(([key, art]) => {
+                art.doc_id = key;  // ← Now key is the top-level YAML key (e.g., "202506-001-001")
                 const parent = art.parent_id;
                 if (!families[parent]) families[parent] = [];
                 families[parent].push(art);

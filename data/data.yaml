@@ -260,7 +260,7 @@ artworks:
     background: null
     presentation: framed
     alt: Ghost from Gears
-  202512-007-001:
+  202512-006-002:
     doc_id: 202512-006-002
     parent_id: 202512-006-001
     title: Study of Digital Noise
@@ -276,7 +276,7 @@ artworks:
     background: null
     presentation: full
     alt: Study of Digital Noise
-  202512-008-001:
+  202512-006-003:
     doc_id: 202512-006-003
     parent_id: 202512-006-001
     title: Self Portrait
@@ -292,7 +292,7 @@ artworks:
     background: null
     presentation: framed
     alt: Self Portrait
-  202512-009-001:
+  202512-006-004:
     doc_id: 202512-006-004
     parent_id: 202512-006-001
     title: Memory Fragments
@@ -308,7 +308,7 @@ artworks:
     background: null
     presentation: framed
     alt: Memory Fragments
-  202512-010-001:
+  202512-006-005:
     doc_id: 202512-006-005
     parent_id: 202512-006-001
     title: VEXLEY // 5YNTHETIC (Lookbook Spread)
@@ -324,7 +324,7 @@ artworks:
     background: null
     presentation: full
     alt: VEXLEY // 5YNTHETIC
-  202512-011-001:
+  202512-007-001:
     doc_id: 202512-007-001
     parent_id: 202512-007-001
     title: "\"I'm more enlightened than you because I see the world as infinite
@@ -342,9 +342,9 @@ artworks:
     presentation: full
     alt: I'm more enlightened than you because I see the world as infinite
       anecdotes.
-  202512-012-001:
-    doc_id: 202512-012-001
-    parent_id: 202512-012-001
+  202512-008-001:
+    doc_id: 202512-008-001
+    parent_id: 202512-008-001
     title: Social Media Banner
     date: December 2025
     category: Branding Image
@@ -358,9 +358,9 @@ artworks:
     background: null
     presentation: full
     alt: Social Media Banner
-  202512-013-001:
-    doc_id: 202512-013-001
-    parent_id: 202512-013-001
+  202512-009-001:
+    doc_id: 202512-009-001
+    parent_id: 202512-009-001
     title: Substack Welcome Page Logo
     date: December 2025
     category: Branding Image
@@ -473,6 +473,22 @@ artworks:
   202601-001-007:
     doc_id: 202601-001-007
     parent_id: 202601-001-001
+    title: Tea Room
+    date: January 2026
+    category: Digital Art
+    tools: Grok Imagine
+    published:
+      text: Note.com
+      url: https://note.com/5ynthaire/n/nbb945345ce2f
+    license: CC BY 4.0
+    image: assets/2026-01_08_tearoom03.jpg
+    dark_variant: null
+    background: null
+    presentation: framed
+    alt: Tea Room
+  202601-001-008:
+    doc_id: 202601-001-008
+    parent_id: 202601-001-001
     title: Debt of Gratitude
     date: January 2026
     category: Digital Art
@@ -486,8 +502,8 @@ artworks:
     background: null
     presentation: framed
     alt: Debt of Gratitude
-  202601-001-008:
-    doc_id: 202601-001-008
+  202601-001-009:
+    doc_id: 202601-001-009
     parent_id: 202601-001-001
     title: Miyako Prose
     date: January 2026
