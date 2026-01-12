@@ -1,7 +1,6 @@
 ---
 artworks:
   202506-001-001:
-    doc_id: 202506-001-001
     parent_id: 202506-001-001
     title: 5YNTHAIRE Logo Type
     date: June 2025
@@ -17,7 +16,6 @@ artworks:
     presentation: framed
     alt: Brand Logo
   202506-002-001:
-    doc_id: 202506-002-001
     parent_id: 202506-002-001
     title: Link Tree
     date: June 2025—October 2025
@@ -33,7 +31,6 @@ artworks:
     presentation: full
     alt: Link Tree
   202507-001-001:
-    doc_id: 202507-001-001
     parent_id: 202507-001-001
     title: Canvas-Lattice Engine
     date: July 2025
@@ -49,7 +46,6 @@ artworks:
     presentation: full
     alt: Canvas-Lattice Engine
   202507-002-001:
-    doc_id: 202507-002-001
     parent_id: 202507-002-001
     title: Try Me button
     date: July 2025
@@ -65,7 +61,6 @@ artworks:
     presentation: full
     alt: Try Me button
   202507-003-001:
-    doc_id: 202507-003-001
     parent_id: 202507-003-001
     title: Visualization of Logical Sinkhole
     date: July 2025
@@ -81,7 +76,6 @@ artworks:
     presentation: full
     alt: Visualization of Logical Sinkhole
   202509-001-001:
-    doc_id: 202509-001-001
     parent_id: 202509-001-001
     title: Decision Hell
     date: September 2025
@@ -97,7 +91,6 @@ artworks:
     presentation: framed
     alt: Decision Hell
   202510-001-001:
-    doc_id: 202510-001-001
     parent_id: 202510-001-001
     title: Information Kernel Framework
     date: October 2025
@@ -113,7 +106,6 @@ artworks:
     presentation: full
     alt: Information Kernel Framework
   202510-002-001:
-    doc_id: 202510-002-001
     parent_id: 202510-002-001
     title: Hallucinating AI
     date: October 2025
@@ -129,7 +121,6 @@ artworks:
     presentation: framed
     alt: Hallucinating AI
   202510-003-001:
-    doc_id: 202510-003-001
     parent_id: 202510-003-001
     title: Color Synth Lite
     date: October 2025
@@ -145,7 +136,6 @@ artworks:
     presentation: full
     alt: Color Synth Lite
   202510-004-001:
-    doc_id: 202510-004-001
     parent_id: 202510-004-001
     title: Miura Fold Output Example
     date: October 2025
@@ -161,7 +151,6 @@ artworks:
     presentation: full
     alt: Miura Fold Output Example
   202512-001-001:
-    doc_id: 202512-001-001
     parent_id: 202512-001-001
     title: Kyoto University × Dark Souls Crossover
     date: December 2025
@@ -177,7 +166,6 @@ artworks:
     presentation: full
     alt: Kyoto University ×Dark Souls Crossover
   202512-002-001:
-    doc_id: 202512-002-001
     parent_id: 202512-002-001
     title: <cite>The True Way</cite> Typographic Art
     date: December 2025
@@ -196,7 +184,6 @@ artworks:
     presentation: full
     alt: Typography
   202512-003-001:
-    doc_id: 202512-003-001
     parent_id: 202512-003-001
     title: "Mode B: Alternative Mode of Human-LLM Engagement"
     date: December 2025
@@ -212,7 +199,6 @@ artworks:
     presentation: framed
     alt: "Mode B: Alternative Mode of Human-LLM Engagement"
   202512-004-001:
-    doc_id: 202512-004-001
     parent_id: 202512-004-001
     title: Rene Descartes Rookie Card ($0.25)
     date: December 2025
@@ -229,7 +215,6 @@ artworks:
     presentation: framed
     alt: Rene Descartes Rookie Card ($0.25)
   202512-005-001:
-    doc_id: 202512-005-001
     parent_id: 202512-005-001
     title: I throw, therefore I am.
     date: December 2025
@@ -245,7 +230,6 @@ artworks:
     presentation: framed
     alt: I throw, therefore I am.
   202512-006-001:
-    doc_id: 202512-006-001
     parent_id: 202512-006-001
     title: Ghost from Gears
     date: December 2025
@@ -261,7 +245,6 @@ artworks:
     presentation: framed
     alt: Ghost from Gears
   202512-006-002:
-    doc_id: 202512-006-002
     parent_id: 202512-006-001
     title: Study of Digital Noise
     date: December 2025
@@ -277,7 +260,6 @@ artworks:
     presentation: full
     alt: Study of Digital Noise
   202512-006-003:
-    doc_id: 202512-006-003
     parent_id: 202512-006-001
     title: Self Portrait
     date: December 2025
@@ -293,7 +275,6 @@ artworks:
     presentation: framed
     alt: Self Portrait
   202512-006-004:
-    doc_id: 202512-006-004
     parent_id: 202512-006-001
     title: Memory Fragments
     date: December 2025
@@ -309,7 +290,6 @@ artworks:
     presentation: framed
     alt: Memory Fragments
   202512-006-005:
-    doc_id: 202512-006-005
     parent_id: 202512-006-001
     title: VEXLEY // 5YNTHETIC (Lookbook Spread)
     date: December 2025
@@ -325,7 +305,6 @@ artworks:
     presentation: full
     alt: VEXLEY // 5YNTHETIC
   202512-007-001:
-    doc_id: 202512-007-001
     parent_id: 202512-007-001
     title: "\"I'm more enlightened than you because I see the world as infinite
       anecdotes.\""
@@ -343,7 +322,6 @@ artworks:
     alt: I'm more enlightened than you because I see the world as infinite
       anecdotes.
   202512-008-001:
-    doc_id: 202512-008-001
     parent_id: 202512-008-001
     title: Social Media Banner
     date: December 2025
@@ -359,7 +337,6 @@ artworks:
     presentation: full
     alt: Social Media Banner
   202512-009-001:
-    doc_id: 202512-009-001
     parent_id: 202512-009-001
     title: Substack Welcome Page Logo
     date: December 2025
@@ -375,7 +352,6 @@ artworks:
     presentation: framed
     alt: Substack Welcome Page Logo
   202601-001-001:
-    doc_id: 202601-001-001
     parent_id: 202601-001-001
     title: Introducing Miyako Prose
     date: January 2026
@@ -391,7 +367,6 @@ artworks:
     presentation: full
     alt: Introducing Miyako Prose
   202601-001-002:
-    doc_id: 202601-001-002
     parent_id: 202601-001-001
     title: Burning Rashomon
     date: January 2026
@@ -407,7 +382,6 @@ artworks:
     presentation: framed
     alt: Burning Rashomon
   202601-001-003:
-    doc_id: 202601-001-003
     parent_id: 202601-001-001
     title: Departing Ronin
     date: January 2026
@@ -423,7 +397,6 @@ artworks:
     presentation: full
     alt: Departing Ronin
   202601-001-004:
-    doc_id: 202601-001-004
     parent_id: 202601-001-001
     title: Beauty in Brutality
     date: January 2026
@@ -439,7 +412,6 @@ artworks:
     presentation: framed
     alt: Beauty in Brutality
   202601-001-005:
-    doc_id: 202601-001-005
     parent_id: 202601-001-001
     title: "<cite>Omote-Ura</cite>: A Study in Duality"
     date: January 2026
@@ -455,7 +427,6 @@ artworks:
     presentation: full
     alt: "Omote-Ura: A Study in Duality"
   202601-001-006:
-    doc_id: 202601-001-006
     parent_id: 202601-001-001
     title: Catherine in a Kimono
     date: January 2026
@@ -471,7 +442,6 @@ artworks:
     presentation: framed
     alt: Catherine in a Kimono
   202601-001-007:
-    doc_id: 202601-001-007
     parent_id: 202601-001-001
     title: Tea Room
     date: January 2026
@@ -487,7 +457,6 @@ artworks:
     presentation: framed
     alt: Tea Room
   202601-001-008:
-    doc_id: 202601-001-008
     parent_id: 202601-001-001
     title: Debt of Gratitude
     date: January 2026
@@ -503,7 +472,6 @@ artworks:
     presentation: framed
     alt: Debt of Gratitude
   202601-001-009:
-    doc_id: 202601-001-009
     parent_id: 202601-001-001
     title: Miyako Prose
     date: January 2026
