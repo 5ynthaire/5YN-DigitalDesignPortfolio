@@ -486,3 +486,155 @@ artworks:
     background: null
     presentation: framed
     alt: Miyako Prose
+  202602-001-001:
+    parent_id: 202602-001-001
+    title: Tech Noir Geometric Patterns
+    date: February 2026
+    category: Digital Art
+    tools: Grok Imagine
+    published:
+      text: Substack
+      url: https://5ynthaire.substack.com/p/principles-of-abstraction-for-precise
+    license: CC BY 4.0
+    image: assets/2026-02_introspection_tech_noir_fused_geometric_texture_patterns.jpg
+    dark_variant: null
+    background: null
+    presentation: framed
+    alt: Tech Noir Geometric Patterns
+  202602-001-002:
+    parent_id: 202602-001-001
+    title: Principles of Abstraction
+    date: February 2026
+    category: Digital Art
+    tools: Grok Imagine
+    published:
+      text: Substack
+      url: https://5ynthaire.substack.com/p/principles-of-abstraction-for-precise
+    license: CC BY 4.0
+    image: assets/2026-02_introspection.jpg
+    dark_variant: null
+    background: null
+    presentation: framed
+    alt: Principles of Abstraction
+  202602-002-001:
+    parent_id: 202602-002-001
+    title: Horizon of Assembly - Eurybia Harlow-Vexley
+    date: February 2026
+    category: AI persona-prompted digital art
+    tools: Grok Imagine
+    published:
+      text: Note
+      url: https://note.com/5ynthaire/n/n06caa984fa27
+    license: CC BY 4.0
+    image: assets/2026-02_horizon_of_assembly.jpg
+    dark_variant: null
+    background: null
+    presentation: framed
+    alt: Horizon of Assembly - Eurybia Harlow-Vexley
+  202602-002-002:
+    parent_id: 202602-002-001
+    title: Midwinter Codex - Eurybia Harlow-Vexley
+    date: February 2026
+    category: AI persona-prompted digital art
+    tools: Grok Imagine
+    published:
+      text: Note
+      url: https://note.com/5ynthaire/n/n06caa984fa27
+    license: CC BY 4.0
+    image: assets/2026-02_midwinter_codex.jpg
+    dark_variant: null
+    background: null
+    presentation: framed
+    alt: Midwinter Codex - Eurybia Harlow-Vexley
+  202602-002-003:
+    parent_id: 202602-002-001
+    title: Valentine’s Day Retrospective - Eurybia Harlow-Vexley
+    date: February 2026
+    category: AI persona-prompted digital art
+    tools: Grok Imagine
+    published:
+      text: Note
+      url: https://note.com/5ynthaire/n/n06caa984fa27
+    license: CC BY 4.0
+    image: assets/2026-02_valentine_day_retrospective.jpg
+    dark_variant: null
+    background: null
+    presentation: framed
+    alt: Valentine’s Day Retrospective - Eurybia Harlow-Vexley
+  202603-001-001:
+    parent_id: 202603-001-001
+    title: The Late Cold War Futurist
+    date: March 2026
+    category: Digital Art
+    tools: Grok Imagine
+    published:
+      text: Substack
+      url: https://5ynthaire.substack.com/p/defining-the-cool-things-we-cant
+    license: CC BY 4.0
+    image: assets/2026-03_lcwf.jpg
+    dark_variant: null
+    background: null
+    presentation: framed
+    alt: The Late Cold War Futurist
+  202603-001-002:
+    parent_id: 202603-001-001
+    title: Oakley Subzero-Inspired Papercraft Sunglasses
+    date: March 2026
+    category: Vector Art
+    tools: Inkscape
+    published:
+      text: Substack
+      url: https://5ynthaire.substack.com/p/defining-the-cool-things-we-cant
+    license: CC BY 4.0
+    image: assets/2026-03_subzero_papercraft.png
+    dark_variant: assets/2026-03_subzero_papercraft_dark.png
+    background: null
+    presentation: full
+    alt: Oakley Subzero-Inspired Papercraft Sunglasses
+  202603-002-001:
+    parent_id: 202603-002-001
+    title: Nominal Distortion Field - Eurybia Harlow-Vexley
+    date: March 2026
+    category: AI persona-prompted digital art
+    tools: Grok Imagine
+    published:
+      text: Note
+      url: https://note.com/5ynthaire/n/n25f79c40ab8d
+    license: CC BY 4.0
+    image: assets/2026-03_nominal-distortion-field.jpg
+    dark_variant: null
+    background: null
+    presentation: framed
+    alt: Nominal Distortion Field - Eurybia Harlow-Vexley
+  202603-002-002:
+    parent_id: 202603-002-001
+    title: Dialogue
+    date: March 2026
+    category: Digital Art
+    tools: Grok Imagine
+    published:
+      text: Note
+      url: https://note.com/5ynthaire/n/n25f79c40ab8d
+    license: CC BY 4.0
+    image: assets/2026-03_dialogue.png
+    dark_variant: null
+    background: null
+    presentation: framed
+    alt: Dialogue
+  202603-002-003:
+    parent_id: 202603-002-001
+    title: Through the Looking Glass(es) - Eurybia Harlow-Vexley
+    date: March 2026
+    category: AI persona-prompted digital art
+    tools: Perchance, Grok Imagine (frame)
+    published:
+      text: Note
+      url: https://note.com/5ynthaire/n/n25f79c40ab8d
+    license: CC BY 4.0
+    image: assets/2026-03_though-the-looking-glass(es).png
+    dark_variant: null
+    background: null
+    presentation: framed
+    alt: Nominal Distortion Field - Eurybia Harlow-Vexley
+
+
